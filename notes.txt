@@ -1,0 +1,1 @@
+use meteor and mongo, maybe aurelia or ember instead of blaze in UI
