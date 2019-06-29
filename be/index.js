@@ -2,11 +2,16 @@
 
 var util = require("util");
 
+var bodyParser = require("body-parser");
 var envvar = require("envvar");
 var express = require("express");
-var bodyParser = require("body-parser");
 var moment = require("moment");
+const path = require("path");
 var plaid = require("plaid");
+
+require("dotenv").config({
+  path: path.resolve(process.cwd(), "env", "dev.env")
+});
 
 var APP_PORT = envvar.number("APP_PORT", 8000);
 var PLAID_CLIENT_ID = envvar.string("PLAID_CLIENT_ID");
